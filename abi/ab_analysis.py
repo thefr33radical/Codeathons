@@ -47,8 +47,8 @@ class ABB(object):
         dataset["price"]= dataset.iloc[:,1]+dataset.iloc[:,2]+dataset.iloc[:,3]+dataset.iloc[:,4]+dataset.iloc[:,5]+dataset.iloc[:,6]
         dates = matplotlib.dates.date2num(dataset.iloc[:,0])
 
-        plt.plot_date(dates, dataset["price"],color="red")
-        plt.plot(dates, dataset["price"])
+        plt.plot_date(dates, dataset["price"],color="black")
+        plt.plot(dates, dataset["price"],color="green")
         ax.set_xlabel("YEARS")
         ax.set_ylabel("PRICE ")
         ax.set_title("Price of PET vs Time")
