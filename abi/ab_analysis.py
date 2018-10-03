@@ -48,7 +48,7 @@ class ABB(object):
         dates = matplotlib.dates.date2num(dataset.iloc[:,0])
 
         plt.plot_date(dates, dataset["price"],color="red")
-        plt.scatter(dates, dataset["price"])
+        plt.plot(dates, dataset["price"])
         ax.set_xlabel("YEARS")
         ax.set_ylabel("PRICE ")
         ax.set_title("Price of PET vs Time")
@@ -60,4 +60,4 @@ class ABB(object):
 if __name__=="__main__":
     obj = ABB()
     dataset1 = obj.read_data1("")
-    obj.plot_time_data(dataset)
+    obj.plot_time_data(dataset1)
