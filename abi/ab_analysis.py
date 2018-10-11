@@ -12,7 +12,7 @@ class ABB(object):
 
     def read_data1(self, path):
         """
-        Read data from CSV file
+        Read data from CSV fileg
         :param path: string
         :return: pandas dataframe
         """
@@ -30,20 +30,21 @@ class ABB(object):
         :return: pandas dataframe
         """
         try:
-            dataset = pd.read_excel("/home/kuliza227/github/Codeathons/abi/Datase 1.xlsx", index_col=None)
+            dataset = pd.read_excel("/home/kuliza227/github/Codeathons/abi/Dataset 1.xlsx", index_col=None)
             print(dataset)
             return dataset
         except Exception as e:
             print(e)
 
     def plot_time_data(self,dataset):
-        years = mdates.YearLocator()   # every year
-        months = mdates.MonthLocator()  # every month
-        yearsFmt = mdates.DateFormatter('%Y')
-
+        """
+        Function to plot time-series data
+        :param dataset: Pandas Dataframe column
+        :return: None
+        """
+        
         fig, ax = plt.subplots()
-        #ax.plot(dataset["Month"], r.adj_close)
-
+        
         dataset["price"]= dataset.iloc[:,1]+dataset.iloc[:,2]+dataset.iloc[:,3]+dataset.iloc[:,4]+dataset.iloc[:,5]+dataset.iloc[:,6]
         dates = matplotlib.dates.date2num(dataset.iloc[:,0])
 
@@ -54,8 +55,7 @@ class ABB(object):
         ax.set_title("Price of PET vs Time")
         plt.savefig("/home/kuliza227/github/Codeathons/abi/price.png")
         plt.show()
-        #print(dataset["price"])
-
+        
 
 if __name__=="__main__":
     obj = ABB()
