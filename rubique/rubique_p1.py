@@ -23,6 +23,75 @@ For each test case, output should be in a different line.
 
 https://www.hackerearth.com/challenge/competitive/rubique-finhack/algorithm/cibil-score/
 
+2
+6
+Ayush 640 100
+Prateek 670 80
+Suraj 670 70
+Sameer 620 50
+Sahil 630 20
+Sumit 640 90
+3
+6
+Ayush 640 100
+Prateek 670 80
+Suraj 670 70
+Sameer 620 50
+Sahil 630 20
+Sumit 640 90
+3
 
 
+
+if __name__=="__main__":
+    no_inputs=0
+    data=[]
+    temp=[]
+    while no_inputs:
+        string = input()
+        if string is "":
+            break
+        temp.append(string.split())
+        data.append(temp)
+        temp.clear()
+        string = ""
 """
+
+def tier_bubble_sort(data):
+    for i in range(0,len(data)-1):
+        for j in range(i,len(data)):
+            if(data[i][1]<data[j][1]):
+                temp=data[i]
+                data[i]=data[j]
+                data[j]=temp
+            if (data[i][1] == data[j][1]):
+                if(data[i][2] > data[j][2]):
+                    temp = data[i]
+                    data[i] = data[j]
+                    data[j] = temp
+                if (data[i][2] == data[j][2]):
+                    if (data[i][0] < data[j][0]):
+                        temp = data[i]
+                        data[i] = data[j]
+                        data[j] = temp
+
+
+
+    print(data)
+
+
+data =[  ["Ayush", 640, 100],
+["Prateek", 670, 80],
+["Suraj", 670, 70],
+["Sameer", 620, 50],
+["Sahil", 630, 20],
+["Sumit", 640, 90]]
+print(data)
+tier_bubble_sort(data)
+
+
+
+
+
+
+
