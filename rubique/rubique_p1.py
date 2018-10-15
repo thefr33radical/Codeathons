@@ -1,4 +1,4 @@
- """
+"""
 Rubique has a unique logic to rate its customers basis the CIBIL score and the RISK score. Following is the algorithm used to rate and sort the customers.
 
 
