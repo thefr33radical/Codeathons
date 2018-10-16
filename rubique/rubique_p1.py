@@ -41,21 +41,8 @@ Sahil 630 20
 Sumit 640 90
 3
 
-
-
-if __name__=="__main__":
-    no_inputs=0
-    data=[]
-    temp=[]
-    while no_inputs:
-        string = input()
-        if string is "":
-            break
-        temp.append(string.split())
-        data.append(temp)
-        temp.clear()
-        string = ""
 """
+
 
 def tier_bubble_sort(data):
     for i in range(0,len(data)-1):
@@ -76,10 +63,32 @@ def tier_bubble_sort(data):
                         data[j] = temp
 
 
+if __name__=="__main__":
+    no_inputs=0
+    data=[]
+    temp=[]
+    while no_inputs:
+        string = input()
+        if string is "":
+            break
+        temp.append(string.split())
+        data.append(temp)
+        temp.clear()
+        string = ""
+
+    """data = [["Ayush", 640, 100],
+            ["Prateek", 670, 80],
+            ["Suraj", 670, 70],
+            ["Sameer", 620, 50],
+            ["Sahil", 630, 20],
+            ["Sumit", 640, 90]]
+    """
 
     print(data)
+    tier_bubble_sort(data)
+    print(data)
 
-
+"""
 data =[  ["Ayush", 640, 100],
 ["Prateek", 670, 80],
 ["Suraj", 670, 70],
@@ -87,6 +96,7 @@ data =[  ["Ayush", 640, 100],
 ["Sahil", 630, 20],
 ["Sumit", 640, 90]]
 print(data)
+"""
 tier_bubble_sort(data)
 
 
