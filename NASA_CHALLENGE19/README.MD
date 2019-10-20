@@ -19,3 +19,7 @@ https://2019.spaceappschallenge.org/locations/northeastern-university/
 * MEAN, MEDIAN, MOST FREQUENT imputing
 * Synthetic minority over-sampling technique
 * Adaptive Synthetic Sampling Approach
+
+* Automated process to detect Categorical, Continious values. Plot Pie chart for categorical data. Plot Histogram for continious data.
+* Distibution of the data is automated.
+* Class imbalance is automatically detected based on threshold.
