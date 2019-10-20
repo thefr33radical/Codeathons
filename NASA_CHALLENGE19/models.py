@@ -9,7 +9,7 @@ from sklearn.multioutput import MultiOutputClassifier
 from sklearn.model_selection import train_test_split
 from keras.layers import Dense, Activation, Dropout
 from keras.models import Sequential
-from sklearn.preprocessing import MinMaxScaler
+from sklearn.preprocessing import MinMaxScaler,LabelEncoder
 from sklearn.svm import SVR
 from scipy.cluster import  hierarchy
 import numpy as np
@@ -19,6 +19,9 @@ from impyute.imputation.cs import mice
 
 
 class Unsup:
+    """
+    Models building data points with unsupervised learning
+    """
     def _init__(self,data):
         self.data=data
         pass
@@ -32,6 +35,10 @@ class Unsup:
         # start the MICE training
         imputed_training=mice(self.data)
 class Cat():
+    """
+    
+    Models with multi input and multi output classifier
+    """
 
     def __init__(self,data_x,data_y):
         self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(data_x, data_y,
@@ -114,6 +121,10 @@ class Cat():
 
         return model    
 class Cont:
+    """
+    
+    Models with multi input and multi output regression
+    """
     def __init__(self,data_x,data_y):
         self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(data_x, data_y,
                                                     train_size=0.75,
@@ -121,6 +132,7 @@ class Cont:
 
     def SVR(self):
         """
+        SVR Model
         """
         regr_multirf = MultiOutputRegressor(SVR(kernel='rbf'))
 
@@ -132,6 +144,9 @@ class Cont:
         print("The prediction score on the test data is {:.2f}%".format(score*100))                                                 
 
     def RF(self):
+        """
+        Random Forest Model
+        """
         
         regr_multirf = MultiOutputRegressor(RandomForestRegressor(max_depth=30,
                                                                 random_state=0))
@@ -205,11 +220,19 @@ if __name__=="__main__":
     
     data_y =  np.random.normal(7, 0.1,(N,5))
     """
+    d=pd.read_csv("https://data.nasa.gov/resource/gvk9-iz74.csv")
+    lbl=LabelEncoder()
 
+    for i in d.columns:
+        if(type(d.loc[:,i]) == type(str)):
+            d.loc[:,i]=lbl.fit_transform(d.loc[:,i])
+
+    data_x=d.iloc[:,:10]
+    data_y=d["center"]+d["status"]
     obj=Cont(data_x,data_y)
     obj.RF()
-    obj.SVR()
+    #obj.SVR()
 
-    obj2=Cat(data_x,data_y)
+    #obj2=Cat(data_x,data_y)
 
-    obj3=U
+    #obj3=U
