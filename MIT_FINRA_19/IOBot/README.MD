@@ -16,7 +16,8 @@ The expectations from IOBoT is to reduce the cost of verification, ensure data i
 
 ### Run
 
-``` pip install -r requirements.txt
+``` 
+ pip install -r requirements.txt
  python app.py "key" "secretkey"
  ```
 
