@@ -2,7 +2,7 @@
 
 * IOBOT - Alternate Investments Bot
 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![alt text](https://github.com/thefr33radical/Codeathons/blob/master/MIT_FINRA_19/IOBot/dataset/IOBoT_arch.png "Architecture")
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=Eqc7-b9KcIM
 " target="_blank"><img src="https://youtu.be/Eqc7-b9KcIM" 
