@@ -1,6 +1,8 @@
+# Ploutus : Explainable AI 
 
 <img src ="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/000/881/347/datas/gallery.jpg" width="640" height="480" />
-### Submission Link
+
+### Links
 * [DEVPOST](https://devpost.com/software/ploutos)
 
 * [UBHACK](https://www.ubhacking.com/)
