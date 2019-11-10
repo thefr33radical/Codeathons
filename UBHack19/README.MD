@@ -1,7 +1,7 @@
 ### Submission Link
 * [DEVPOST](https://devpost.com/software/ploutos)
 
-* https://www.ubhacking.com/
+* [UBHACK](https://www.ubhacking.com/)
 
 ### Summary
 
