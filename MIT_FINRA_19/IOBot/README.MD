@@ -1,6 +1,6 @@
-# MIT FINRA HACKATHON 2019
 
 ## IOBOT - Onboarding Investors leveraging ML & Blockchain
+#### MIT FINRA 19
 
 ### Architecture 
 <img src="https://github.com/thefr33radical/Codeathons/blob/master/MIT_FINRA_19/IOBot/dataset/IOBoT_arch.png" alt="Architecture" width="640" height="480" border="10" align="center" />
