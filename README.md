@@ -1,5 +1,4 @@
 # Codeathons
-#####  (updating..)
 
 Domain | Project Name  | Date | Status |
 ------------- | -------------  | ------------- | --------
